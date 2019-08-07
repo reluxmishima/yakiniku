@@ -36,7 +36,7 @@
             <div class="m_modifair">
             <label for="reserve_date" class="block">予約日</label><p class="p_text">Choice a date</p>
             </div>
-            <input type="text" class="input_area" id="datepicker" name="reserve_date" placeholder="YYYY/MM/DD" value="">
+            <input type="text" class="input_area" id="datepicker" name="reserve_date" readonly="readonly" placeholder="YYYY/MM/DD" value="">
             <br />
             <div class="m_modifair">
             <label for="reserve_time" class="block">予約時刻</label><p class="p_text">Choice a "start time of day"</p>
@@ -125,7 +125,10 @@
             <div class="m_modifair">
             <label for="phone_no" class="block title">電話番号</label><p class="p_text">For telephone number</p>
             </div>
+            <div class="black_lists">
+            <span class="error">利用履歴を確認してください</span>
             <input type="tel" class="input_area" id="phone_no" name="phone_no" placeholder="09012345678" maxlength="11">
+            </div>
             <br />
             <div class="m_modifair">
             <label for="client_name" class="block title">氏名</label><p class="p_text">For full name</p>
@@ -143,7 +146,7 @@
             <input type="text" class="input_area" id="staff_no" name="staff_no" placeholder="A003" value="">
             <br />
             <div class="submit_area">
-                <input type="submit" id="btnSubmit" name="btnSubmit" value="予約送信">
+                <input type="button" id="btnSubmit" name="btnSubmit" value="予約送信">
             </div>
         </form>
     </div>

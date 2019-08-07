@@ -164,7 +164,7 @@ input, button, textarea, select {
 
 
 
-/* ---------------Form styl--------------- */
+/* ---------------Form style--------------- */
 .logo-lg {
     font-size: 3rem;
     font-weight: bolder;
@@ -177,7 +177,7 @@ input, button, textarea, select {
     width:60px;
     height: 3rem;
     padding: 1.8rem 0;
-    margin-block-end: 5rem;
+    margin-block-end: 8rem;
     text-align: center;
 }
 
@@ -185,7 +185,7 @@ input, button, textarea, select {
     font-size: 1.2rem;
     width: 10rem;
     height: 3rem;
-    margin-block-end: 5rem;
+    margin-block-end: 8rem;
 }
 
 .input_area {
@@ -193,7 +193,7 @@ input, button, textarea, select {
     width: 20rem;
     height: 3rem;
     padding: 1.8rem 0 1.8rem .5rem;
-    margin-block-end: 5rem;
+    margin-block-end: 8rem;
 }
 
 .judge_area {
@@ -275,12 +275,12 @@ input, button, textarea, select {
     line-height: 2;
     text-align: center;
     margin-block-end: .3rem;
-    background-color: #85f781;
-    color: #047e00;
+    background-color: #a4ffa1;
+    color: #047700;
 }
 
 .inline {
-    margin-block-end: 4rem;
+    margin-block-end: 8rem;
 }
 
 .seat_ch,
@@ -329,4 +329,43 @@ input, button, textarea, select {
     outline-offset: -2px;
     outline-style: auto;
     outline-width: 5px;
+}
+
+
+
+
+
+/* ---------------Black list hits--------------- */
+.black_lists {
+    position: relative;
+}
+.error {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    padding: .5em 1em .4em;
+    background-color: #f66;
+    border: 1px solid #f00;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.error:after,
+.error:before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 15px;
+    border: solid transparent;
+}
+
+.error:after {
+    margin-left: 1px;
+    border-top-color: #f66;
+    border-width: 7px;
+}
+
+.error:before {
+    border-top-color: #f00;
+    border-width: 8px;
 }
