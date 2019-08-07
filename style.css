@@ -121,7 +121,11 @@ select {
     padding: 2rem 0;
 }
 
-
+@media screen and (min-width: 1025px) {
+    .inner {
+        width: 60%;
+    }
+}
 
 
 /* ---------------Input style--------------- */
