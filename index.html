@@ -1,0 +1,181 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>やきにく実践塾</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" type="image/png" href="./apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="./icon-192x192.png">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <!-- jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1/themes/dark-hive/jquery-ui.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Didact+Gothic&display=swap" rel="stylesheet">
+    <!-- file for out -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="header">
+        <h1 class="logo-lg">- 予約管理システム -</h1>
+        <div class="menu">
+            <ul class="home_menu">
+                <li class="header_menu"><a href="#">ホーム</a></li>
+                <li class="header_menu"><a href="#">予約一覧</a></li>
+                <li class="header_menu"><a href="#">管理者メニュー</a></li>
+            </ul>
+        </div>       
+        </header>
+        <div class="inner">
+        <form action="#" method="POST">
+            <div class="m_modifair">
+            <label for="reserve_date" class="block">予約日</label><p class="p_text">Choice a date</p>
+            </div>
+            <input type="text" class="input_area" id="datepicker" name="reserve_date" placeholder="YYYY/MM/DD" value="">
+            <br />
+            <div class="m_modifair">
+            <label for="reserve_time" class="block">予約時刻</label><p class="p_text">Choice a "start time of day"</p>
+            </div>
+            <select class="reserve_time other" id="reserve_time" name="reserve_time">
+                <option value="">----</option>
+                <option value="17:00" class="content">17時00分</option>
+                <option value="17:30" class="content">17時30分</option>
+                <option value="18:00" class="content">18時00分</option>
+                <option value="18:30" class="content">18時30分</option>
+                <option value="19:00" class="content">19時00分</option>
+                <option value="19:30" class="content">19時30分</option>
+                <option value="20:00" class="content">20時00分</option>
+                <option value="20:30" class="content">20時30分</option>
+                <option value="21:00" class="content">21時00分</option>
+                <option value="21:30" class="content">21時30分</option>
+                <option value="22:00" class="content">22時00分</option>
+                <option value="22:30" class="content">22時30分</option>
+            </select> 　〜　
+            <select class="reserve_time" id="end_time" name="end_time">
+                <option value="">----</option>
+                <option value="17:30">17時30分</option>
+                <option value="18:00">18時00分</option>
+                <option value="18:30">18時30分</option>
+                <option value="19:00">19時00分</option>
+                <option value="19:30">19時30分</option>
+                <option value="20:00">20時00分</option>
+                <option value="20:30">20時30分</option>
+                <option value="21:00">21時00分</option>
+                <option value="21:30">21時30分</option>
+                <option value="22:00">22時00分</option>
+                <option value="22:30">22時30分</option>
+                <option value="23:00">23時00分</option>
+            </select>
+            <div class="count_inner">
+                <div class="count_area">
+                    <div class="m_modifair">
+                        <label for="quantity" class="block count_title">大人人数</label><p class="p_text">Count of adluts</p>
+                    </div>
+                    <input type="tel" class="num" id="adult" name="quantity" maxlength="2"> 人
+                </div>
+                <div class="count_area">
+                    <div class="m_modifair">
+                        <label for="quantity" class="block count_title">子ども人数</label><p class="p_text">Count of childs</p>
+                    </div>
+                    <input type="tel" class="num" id="child" name="quantity" maxlength="2"> 人
+                </div>
+            </div>
+            <div class="m_modifair">
+                <label for="" class="judge block">空席卓一覧</label><p class="p_text">Vacant seat display</p>
+                </div>
+                <div class="judge_area"></div>
+            <div class="m_modifair">
+                <label for="" class="block title">卓番選択</label><p class="p_text">Select a seat number</p>
+            </div>
+            <select class="reserve_time" id="seat_number" name="seat_number">
+                    <option value="">----</option>
+                    <option value="1">No,1</option>
+                    <option value="2">No,2</option>
+                    <option value="3">No,3</option>
+                    <option value="4">No,4</option>
+                    <option value="5">No,5</option>
+                    <option value="6">No,6</option>
+                    <option value="7">No,7</option>
+                    <option value="8">No,8</option>
+                    <option value="9">No,9</option>
+                    <option value="10">No,10</option>
+            </select>
+            <div class="m_modifair">
+            <label class="block title">席タイプ</label><p class="p_text">Push a "seat type"</p>
+            </div>
+                <div class="inline">
+                    <input type="radio" id="seat_type_0" class="seat_ch lee" name="seat_type" value="box" checked="checked"><label class="sky" for="seat_type_0">ボックス席</label>
+                    <input type="radio" id="seat_type_1" class="seat_ch lee" name="seat_type" value="counter"><label class="sky" for="seat_type_1">カウンター席</label>
+                    <input type="radio" id="seat_type_2" class="seat_ch lee" name="seat_type" value="table"><label class="sky" for="seat_type_2">テーブル席</label>
+                    <input type="radio" id="seat_type_3" class="seat_ch lee" name="seat_type" value="table"><label class="sky" for="seat_type_3">指定なし</label>
+                </div>
+            <div class="m_modifair">
+            <label class="block" title>喫煙有無</label><p class="p_text">Smoking or non?</p>
+            </div>
+                <div class="inline">    
+                    <input type="radio" id="seat_smoke_0" class="smoke_ch lee" name="seat_smoke" value="0" checked="checked"><label class="sky" for="seat_smoke_0">禁煙席</label>
+                    <input type="radio" id="seat_smoke_1" class="smoke_ch lee" name="seat_smoke" value="1"><label class="sky" for="seat_smoke_1">喫煙席</label>
+                    <input type="radio" id="seat_smoke_2" class="smoke_ch lee" name="seat_smoke" value="2"><label class="sky" for="seat_smoke_2">どちらでも</label>
+                </div>
+            <div class="m_modifair">
+            <label for="phone_no" class="block title">電話番号</label><p class="p_text">For telephone number</p>
+            </div>
+            <input type="tel" class="input_area" id="phone_no" name="phone_no" placeholder="09012345678" maxlength="11">
+            <br />
+            <div class="m_modifair">
+            <label for="client_name" class="block title">氏名</label><p class="p_text">For full name</p>
+            </div>
+            <input type="text" class="input_area" id="client_name" name="client_name" placeholder="ひらがな入力" value=""> 様
+            <br />
+            <div class="m_modifair">
+            <label class="block title">受付備考</label><p class="p_text">Requests from customers</p>
+            </div>
+            <textarea id="remarks" class="input_comment" name="remarks" placeholder="お客様からの要望を入力"></textarea>
+            <br />
+            <div class="m_modifair">
+            <label class="block title">スタッフID</label><p class="p_text">Staff ID</p>
+            </div>
+            <input type="text" class="input_area" id="staff_no" name="staff_no" placeholder="A003" value="">
+            <br />
+            <div class="submit_area">
+                <input type="submit" id="btnSubmit" name="btnSubmit" value="予約送信">
+            </div>
+        </form>
+    </div>
+    </div>
+    <!-- ./wrapper -->
+<script>
+    $(function() {
+        $("#datepicker").datepicker();
+    });
+    $(function() {
+	var op = {
+			closeText: '閉じる',
+			prevText: '&#x3c;前',
+			nextText: '次&#x3e;',
+			currentText: '今日',
+			monthNames: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+			monthNamesShort: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+			dayNames: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+			dayNamesShort: ['日','月','火','水','木','金','土'],
+			dayNamesMin: ['日','月','火','水','木','金','土'],
+			weekHeader: '週',
+			dateFormat: 'yy/mm/dd',
+			firstDay: 0,
+			isRTL: false,
+			showMonthAfterYear: true,
+			yearSuffix: '年'};
+	$(".datepicker").datepicker(op);
+	$(".datepicker").attr({
+		size: "16",
+		autocomplete: "off"
+	});
+});
+</script>
+</body>
+</html>
