@@ -1,0 +1,80 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>予約編集画面</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+        <header class="header">
+                <p id="dateDisplay"></p>
+            <h1 class="logo-lg">- 予約編集モード -</h1>
+            <div class="menu">
+                <ul class="home_menu">
+                    <li class="header_menu"><a href="./index.html">予約受付</a></li>
+                    <li class="header_menu"><a href="./reserve_list.html">予約一覧</a></li>
+                    <li class="header_menu"><a href="./reserve_edit.html">予約編集</a></li>
+                </ul>
+            </div>       
+            </header>
+            <div class="inner">
+	<form action="reserve_edit_post.php" method="POST">
+		<label for="phone_no">電話番号</label>
+		09012345678
+		<br />
+		<label for="client_name">お名前</label>
+		やきにくたろう　様
+		<br />
+		<label for="reserve_date">予約日</label>
+		<input type="text" class="w100" id="reserve_date" name="reserve_date" placeholder="YYYY-MM-DD" value="">
+		<br />
+		<label for="reserve_time">予約時刻</label>
+		<select class="w100" id="reserve_time" name="reserve_time">
+			<option value="">(選択)</option>
+			<option value="17:00">17時00分</option>
+			<option value="17:30">17時30分</option>
+			<option value="18:00">18時00分</option>
+			<option value="18:30">18時30分</option>
+			<option value="19:00">19時00分</option>
+			<option value="19:30">19時30分</option>
+			<option value="20:00">20時00分</option>
+			<option value="20:30">20時30分</option>
+			<option value="21:00">21時00分</option>
+			<option value="21:30">21時30分</option>
+			<option value="22:00">22時00分</option>
+			<option value="22:30">22時30分</option>
+		</select>
+		<br />
+		<label for="quantity">人数</label>
+		<input type="text" class="w30" id="quantity" name="quantity" placeholder="" value="">人
+		<br />
+		<label>席タイプ</label>
+		<input type="radio" id="seat_type_0" name="seat_type" value="box"><label for="seat_type_0">ボックス席</label>
+		<input type="radio" id="seat_type_1" name="seat_type" value="counter"><label for="seat_type_1">カウンター</label>
+		<input type="radio" id="seat_type_2" name="seat_type" value="table"><label for="seat_type_2">テーブル席</label>
+		<br />
+		<label>喫煙</label>
+		<input type="checkbox" id="seat_smoke_0" name="seat_smoke" value="0"><label for="seat_smoke_0">禁煙席</label>
+		<input type="checkbox" id="seat_smoke_1" name="seat_smoke" value="1"><label for="seat_smoke_1">喫煙席</label>
+		<br />
+		<label>備考</label>
+		<br />
+		<textarea cols="50" rows="5" id="note" name="note"></textarea>
+		<br />
+		<br />
+		<label>キャンセル理由</label>
+		<input type="checkbox" id="cancel" name="cancel" value="1"><label for="seat_smoke_0">キャンセルする</label>
+		<br />
+		<textarea cols="50" rows="5" id="cancel_note" name="cancel_note"></textarea>
+		<br />
+		<input type="submit" id="btnSubmit" class="btnSubmit" name="btnSubmit" value="変更する">
+		<br />
+	</form>
+</div>
+</div>
+<!-- ./wrapper -->​
+<script src="./yakiniku.js"></script>
+</body>
+</html>

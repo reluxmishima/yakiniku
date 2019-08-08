@@ -208,7 +208,7 @@ input, button, textarea, select {
 }
 
 .judge_area {
-    width: 100%;
+    width: 96%;
     height: 15rem;
     padding: 1rem;
     margin-block-end: 5rem;
@@ -216,7 +216,7 @@ input, button, textarea, select {
 }
 
 .repeat_list {
-    width: 100%;
+    width: 96%;
     height: 30rem;
     padding: 1rem;
     margin-block-end: 5rem;
@@ -251,6 +251,7 @@ input, button, textarea, select {
     color: #222222;
     width: 12rem;
     padding: 1.2rem;
+    background-color: #c9c9c9;
     border-radius: 1rem;
 }
 
@@ -525,6 +526,14 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Staff ID';
+    margin-inline-start: .7rem;
+    border-block-end: 1px solid #eeeeee;
+}
+
+.en_13::after {
+    position: relative;
+    font-size: 1.2rem;
+    content: 'Check list';
     margin-inline-start: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
