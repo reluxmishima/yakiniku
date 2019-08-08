@@ -70,7 +70,19 @@ a:visited {
 
 
 
-/* ---------------menu list--------------- */
+/* ---------------header--------------- */
+.header {
+    width: 90%;
+    padding-block-end: 3rem;
+    margin: auto;
+    border-bottom: solid 5px var(--base);
+}
+
+
+#dateDisplay {
+    text-align: right;
+}
+
 menu {
     width: 100vw;
 }
@@ -86,7 +98,6 @@ menu {
     width: 30%;
     margin: 0 auto;
     text-align: center;
-
 }
 
 .header_menu+ .header_menu {
@@ -100,13 +111,6 @@ menu {
 select {
     background-color: var(--base);
     padding-inline-start: .5rem;
-}
-
-.header {
-    width: 90%;
-    padding: 3rem 0;
-    margin: auto;
-    border-bottom: solid 5px var(--base);
 }
 
 .wrapper {
@@ -182,8 +186,15 @@ input, button, textarea, select {
 }
 
 .reserve_time {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: 10rem;
+    height: 3rem;
+    margin-block-end: 8rem;
+}
+
+.reserve_seat {
+    font-size: 1.4rem;
+    width: 18rem;
     height: 3rem;
     margin-block-end: 8rem;
 }
@@ -199,24 +210,47 @@ input, button, textarea, select {
 .judge_area {
     width: 100%;
     height: 15rem;
+    padding: 1rem;
+    margin-block-end: 5rem;
+    background-color: #3498db93;
+}
+
+.repeat_list {
+    width: 100%;
+    height: 30rem;
+    padding: 1rem;
     margin-block-end: 5rem;
     background-color: #3498db93;
 }
 
 .submit_area {
-    width: 100%;
-    margin: 0 auto;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
 }
 
-#btnSubmit {
-    display: block;
+.btnSubmit {
+    display: inline-block;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--base);
-    width: 20rem;
+    width: 18rem;
     padding: 1.2rem;
-    margin: 0 auto;
+    margin-inline-end: 1rem;
     background-color: var(--parsonal);
+    border-radius: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222222;
+    width: 12rem;
+    padding: 1.2rem;
     border-radius: 1rem;
 }
 
@@ -233,6 +267,19 @@ input, button, textarea, select {
     color: #3498db93;
 }
 
+.table001 {
+    font-size: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    color: var(--base);
+    width: auto;
+    padding: .3rem;
+    border: solid 1px #777777;
+}
 
 
 
@@ -254,7 +301,7 @@ input, button, textarea, select {
     }
 }
 
-.m_modifair {
+.m_modifier {
     position: relative;
 }
 
@@ -273,6 +320,21 @@ input, button, textarea, select {
     background-color: #dddddd00;
     color: #eeeeee;
 }
+
+.repeat_list p {
+    display: inline-block;
+}
+
+.log-d {
+    width: 70%;
+    margin: 1rem auto;
+    border-bottom: solid 1px #eeeeee;
+}
+
+.log-p {
+    width: 200px;
+    text-align: right;
+} 
 
 .inline {
     margin-block-end: 8rem;
@@ -299,7 +361,9 @@ input, button, textarea, select {
     font-size: 1.2rem;
     font-weight: 500;
     text-align: center;
-    width: 11rem;
+    line-height: 2.5;
+    width: 13rem;
+    height: 3rem;
     padding: .5rem 1rem;
     margin: .5rem .5rem .5rem 0;
     background-color: rgb(32, 32, 32);
@@ -380,7 +444,7 @@ input, button, textarea, select {
 .en_2::after {
     position: relative;
     font-size: 1.2rem;
-    content: 'Choice a "start time of day"';
+    content: 'Choice of start time and end time';
     margin-inline-start: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
