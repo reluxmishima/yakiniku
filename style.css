@@ -50,6 +50,7 @@ html {
 }
  
 body {
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.5rem;
     line-height: 1.7;
     height: 100vh;
@@ -80,6 +81,8 @@ a:visited {
 
 
 #dateDisplay {
+    font-size: 2.5vw;
+    line-height: 1.5;
     text-align: right;
 }
 
@@ -139,7 +142,7 @@ input[type="number"]:focus,
 textarea:focus {
   -webkit-transition: all .3s;
   transition: all .3s;
-  border-radius: .7rem;
+  border-radius: .5rem;
   box-shadow: 0 0 1.5rem #2776f7;
   border: 1px solid #2339fc;
 }
@@ -162,7 +165,6 @@ input, button, textarea, select {
     width: 100%;
     height: 10rem;
     padding: 1rem 0 1rem .5rem;
-    margin-block-end: 5rem;
 }
 
 
@@ -176,12 +178,15 @@ input, button, textarea, select {
     text-align: center;
 }
 
+.trans-title {
+    display: inline-block;
+}
+
 .num {
     font-size: 2rem;
     width:60px;
     height: 3rem;
     padding: 1.8rem 0;
-    margin-block-end: 8rem;
     text-align: center;
 }
 
@@ -189,14 +194,12 @@ input, button, textarea, select {
     font-size: 1.4rem;
     width: 10rem;
     height: 3rem;
-    margin-block-end: 8rem;
 }
 
 .reserve_seat {
     font-size: 1.4rem;
     width: 18rem;
     height: 3rem;
-    margin-block-end: 8rem;
 }
 
 .input_area {
@@ -204,23 +207,20 @@ input, button, textarea, select {
     width: 20rem;
     height: 3rem;
     padding: 1.8rem 0 1.8rem .5rem;
-    margin-block-end: 8rem;
 }
 
 .judge_area {
     width: 96%;
     height: 15rem;
     padding: 1rem;
-    margin-block-end: 5rem;
-    background-color: #3498db93;
+    background-color: #3498db;
 }
 
 .repeat_list {
-    width: 96%;
+    width: 100%;
     height: 30rem;
-    padding: 1rem;
-    margin-block-end: 5rem;
-    background-color: #3498db93;
+    padding: 1rem 0;
+    background-color: #3498db;
 }
 
 .submit_area {
@@ -229,7 +229,7 @@ input, button, textarea, select {
     flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .btnSubmit {
@@ -239,7 +239,6 @@ input, button, textarea, select {
     color: var(--base);
     width: 18rem;
     padding: 1.2rem;
-    margin-inline-end: 1rem;
     background-color: var(--parsonal);
     border-radius: 1rem;
 }
@@ -285,11 +284,6 @@ td {
 
 
 /* ---------------Adjustment--------------- */
-.count_inner {
-    position: relative;
-    width: 100%;
-}
-
 .count_area {
     display: block;
 }
@@ -298,12 +292,13 @@ td {
     .count_area {
         position: relative;
         display: inline-block;
-        width: 49%;
+        width: 50%;
     }
 }
 
 .m_modifier {
     position: relative;
+    margin-bottom: 7rem;
 }
 
 .count_title {
@@ -317,7 +312,7 @@ td {
     width: 100%;
     height: 3rem;
     line-height: 1.5;
-    margin-block-end: .5rem;
+    margin-bottom: .5rem;
     background-color: #dddddd00;
     color: #eeeeee;
 }
@@ -328,23 +323,19 @@ td {
 
 .log-d {
     width: 70%;
-    margin: 1rem auto;
+    margin: .8rem auto;
     border-bottom: solid 1px #eeeeee;
 }
 
 .log-p {
-    width: 200px;
+    width: 11rem;
     text-align: right;
 } 
-
-.inline {
-    margin-block-end: 8rem;
-}
 
 .seat_ch,
 .smoke_ch {
     font-size: 1rem;
-    margin-block-end: 3rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -434,11 +425,30 @@ td {
 
 
 /* ---------------English title--------------- */
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal .inner {
+    width: 90%;
+    height: 90%;
+    background-color: #eeeeeee5;
+}
+
+
+
+
+
+/* ---------------English title--------------- */
 .en_1::after {
     position: relative;
     font-size: 1.2rem;
     content: 'Choice a date';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -446,7 +456,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Choice of start time and end time';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -454,7 +464,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Count of adluts';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -462,7 +472,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Count of childs';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -470,7 +480,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Vacant seat display';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -478,7 +488,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Select a seat number';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -486,7 +496,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Push a "seat type"';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -494,7 +504,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Smoking or non';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -502,7 +512,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'For telephone number';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -510,7 +520,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'For full name';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -518,7 +528,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Requests from customers';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -526,7 +536,7 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Staff ID';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }
 
@@ -534,6 +544,6 @@ td {
     position: relative;
     font-size: 1.2rem;
     content: 'Check list';
-    margin-inline-start: .7rem;
+    margin-left: .7rem;
     border-block-end: 1px solid #eeeeee;
 }

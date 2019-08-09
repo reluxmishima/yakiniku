@@ -1,7 +1,5 @@
 // Date picker-----------------------------------
-$(function() {
-    $("#datepicker").datepicker();
-});
+$("#datepicker").datepicker();
 $(function() {
 var op = {
     closeText: '閉じる',
@@ -40,18 +38,18 @@ const minutes = date.getMinutes();
 const seconds = date.getSeconds();
 const times = `${hours}:${minutes}:${seconds}`;
 
-document.querySelector('#dateDisplay').innerHTML = `${label}(${dayLabel})${times}更新`;
+document.querySelector('#dateDisplay').innerHTML = `${label}(${dayLabel})${times}`;
 
 // Form area-----------------------------------
 // 予約日
-const reserveElement = document.querySelector('.input_area');
+const reserveElement = document.getElementById('datepicker');
 reserveElement.addEventListener('change', reserveChange);
 
 function reserveChange(event) {
     var reserveValue = event.target.value;
-    document.querySelector('.logreserve').innerHTML = reserveValue;
-}
+    document.querySelector('.logreserve').innerHTML = reserveValue.change();
 
+}
 // 予約時刻
 
 // 大人人数
@@ -108,7 +106,12 @@ function nameChange(event) {
 }
 
 
-// Button click
+// Button click reload
 document.querySelector('.btn').addEventListener('click', () => {
     location.reload(true);
-})
+});
+
+// モーダルウィンドウ生成
+
+const divElement = document.createElement('div');
+const paragraphElement = document.createElement('p');
