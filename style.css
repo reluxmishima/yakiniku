@@ -1,3 +1,9 @@
+/* pre zone */
+pre {
+    color: #222222;
+    background-color: aqua;
+}
+
 /* ---------------Margin reset--------------- */
 html, body,
 h1, h2, h3, h4, h5, h6,
@@ -34,10 +40,10 @@ ul {
 
 /* ---------------Root setting--------------- */
 :root {
-    --bg: #374053;
-    --primary: #9a0079;
-    --parsonal: #ff6600;
-    --base: #eeeeee;
+    --bg: rgb(55, 63, 82);
+    --primary: rgb(153, 0, 119);
+    --parsonal: rgb(255, 102, 0);
+    --base: rgb(237, 237, 237);
     --font: calc(0.625vw + 12);
 }
 
@@ -55,6 +61,7 @@ body {
     line-height: 1.7;
     height: 100vh;
     letter-spacing: .2rem;
+    color: var(--base);
 }
 
 * {
@@ -113,12 +120,12 @@ menu {
 /* ---------------Main field setting--------------- */
 select {
     background-color: var(--base);
-    padding-inline-start: .5rem;
+    padding-left: .5rem;
 }
 
 .wrapper {
     background-color: var(--bg);
-    color: var(--base);
+    color: var(-001-base);
     width: 100vw;
 }
 
@@ -143,8 +150,8 @@ textarea:focus {
   -webkit-transition: all .3s;
   transition: all .3s;
   border-radius: .5rem;
-  box-shadow: 0 0 1.5rem #2776f7;
-  border: 1px solid #2339fc;
+  box-shadow: 0 0 1.5rem rgb(39, 118, 247);
+  border: 1px solid rgb(35, 57, 252);
 }
 
 input, button, textarea, select {
@@ -186,7 +193,7 @@ input, button, textarea, select {
     font-size: 2rem;
     width:60px;
     height: 3rem;
-    padding: 1.8rem 0;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -206,21 +213,21 @@ input, button, textarea, select {
     font-size: 2rem;
     width: 20rem;
     height: 3rem;
-    padding: 1.8rem 0 1.8rem .5rem;
+    padding: 1rem 0 1rem .5rem;
 }
 
 .judge_area {
     width: 96%;
     height: 15rem;
     padding: 1rem;
-    background-color: #3498db;
+    background-color: rgba(52, 152, 219, 0.5);
 }
 
 .repeat_list {
     width: 100%;
     height: 30rem;
     padding: 1rem 0;
-    background-color: #3498db;
+    background-color: rgba(52, 152, 219, 0.5);
 }
 
 .submit_area {
@@ -250,21 +257,21 @@ input, button, textarea, select {
     color: #222222;
     width: 12rem;
     padding: 1.2rem;
-    background-color: #c9c9c9;
+    background-color: rgb(201, 201, 201);
     border-radius: 1rem;
 }
 
 /* Chrome */
 ::-webkit-input-placeholder {
-    color: #3498db93;
+    color: rgba(52, 152, 219, 0.576);
 }  
 /* Firefox */
 ::-moz-placeholder {
-    color: #3498db93;
+    color: rgba(52, 152, 219, 0.576);
 }
   /* IE */
 :-ms-input-placeholder {
-    color: #3498db93;
+    color: rgba(52, 152, 219, 0.576);
 }
 
 .table001 {
@@ -278,7 +285,7 @@ td {
     color: var(--base);
     width: auto;
     padding: .3rem;
-    border: solid 1px #777777;
+    border: solid 1px rgb(119, 119, 119);
 }
 
 
@@ -313,8 +320,8 @@ td {
     height: 3rem;
     line-height: 1.5;
     margin-bottom: .5rem;
-    background-color: #dddddd00;
-    color: #eeeeee;
+    background-color: rgba(221, 221, 221, 0);
+    color: rgb(238, 238, 238);
 }
 
 .repeat_list p {
@@ -324,7 +331,7 @@ td {
 .log-d {
     width: 70%;
     margin: .8rem auto;
-    border-bottom: solid 1px #eeeeee;
+    border-bottom: solid 1px rgb(238, 238, 238);
 }
 
 .log-p {
@@ -371,12 +378,12 @@ td {
 
 .lee:checked + .sky {
     background: rgb(172, 0, 0);
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
 
 .lee:focus + .sky {
-    outline-color: #4D90FE;
+    outline-color: rgb(77, 144, 254);
     outline-offset: -2px;
     outline-style: auto;
     outline-width: 5px;
@@ -436,7 +443,7 @@ td {
 .modal .inner {
     width: 90%;
     height: 90%;
-    background-color: #eeeeeee5;
+    background-color: rgba(238, 238, 238, 0.898);
 }
 
 
@@ -449,7 +456,7 @@ td {
     font-size: 1.2rem;
     content: 'Choice a date';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_2::after {
@@ -457,7 +464,7 @@ td {
     font-size: 1.2rem;
     content: 'Choice of start time and end time';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_3::after {
@@ -465,7 +472,7 @@ td {
     font-size: 1.2rem;
     content: 'Count of adluts';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_4::after {
@@ -473,7 +480,7 @@ td {
     font-size: 1.2rem;
     content: 'Count of childs';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_5::after {
@@ -481,7 +488,7 @@ td {
     font-size: 1.2rem;
     content: 'Vacant seat display';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_6::after {
@@ -489,7 +496,7 @@ td {
     font-size: 1.2rem;
     content: 'Select a seat number';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_7::after {
@@ -497,7 +504,7 @@ td {
     font-size: 1.2rem;
     content: 'Push a "seat type"';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_8::after {
@@ -505,7 +512,7 @@ td {
     font-size: 1.2rem;
     content: 'Smoking or non';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_9::after {
@@ -513,7 +520,7 @@ td {
     font-size: 1.2rem;
     content: 'For telephone number';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_10::after {
@@ -521,7 +528,7 @@ td {
     font-size: 1.2rem;
     content: 'For full name';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_11::after {
@@ -529,7 +536,7 @@ td {
     font-size: 1.2rem;
     content: 'Requests from customers';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_12::after {
@@ -537,7 +544,7 @@ td {
     font-size: 1.2rem;
     content: 'Staff ID';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
 
 .en_13::after {
@@ -545,5 +552,5 @@ td {
     font-size: 1.2rem;
     content: 'Check list';
     margin-left: .7rem;
-    border-block-end: 1px solid #eeeeee;
+    border-block-end: 1px solid rgb(238, 238, 238);
 }
