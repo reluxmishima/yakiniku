@@ -1,8 +1,4 @@
-<?php
-session_start();
-$_SESSION['session_message'] = 'session is saved';
-?>
-
+<?php session_start(); ?>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
